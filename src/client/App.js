@@ -6,6 +6,7 @@ import {
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 
+import { connectUser } from './api';
 //for store
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
@@ -19,6 +20,9 @@ const middleware = applyMiddleware( thunk, logger );
 const store = createStore (rootReducer, middleware);
 
 class App extends Component {
+  componentDidMount() {
+    connectUser();
+  }
   render() {
     return (
       <Provider store={store}>

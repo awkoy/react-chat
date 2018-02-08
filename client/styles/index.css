@@ -42,17 +42,7 @@ h1 {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px; }
-  .app__form__error {
-    color: red;
-    text-transform: uppercase;
-    font-size: 12px;
-    position: absolute;
-    left: 0;
-    letter-spacing: 1px;
-    right: 0;
-    bottom: 40px;
-    text-align: center; }
+  padding-top: 50px; }
   .app__form input {
     display: block;
     background: none;
@@ -65,14 +55,11 @@ h1 {
     color: #0F0;
     text-align: center;
     letter-spacing: 1px;
-    padding-top: 20px;
     padding-bottom: 10px; }
     .app__form input:focus::-webkit-input-placeholder {
       opacity: 0; }
     .app__form input::-webkit-input-placeholder {
       color: #0F0; }
-    .app__form input.error {
-      border-bottom: 2px solid red; }
   .app__form button {
     border: 2px solid #0F0;
     padding: 12px 30px;

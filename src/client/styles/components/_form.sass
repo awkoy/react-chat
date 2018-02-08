@@ -1,0 +1,85 @@
+.app__form
+    max-width: 400px
+    margin-left: auto
+    margin-right: auto
+    padding-top: 30px
+    &__error
+        color: $red
+        text-transform: uppercase
+        font-size: 12px
+        position: absolute
+        left: 0
+        letter-spacing: 1px
+        right: 0
+        bottom: 40px
+        text-align: center
+    input
+        display: block
+        background: none
+        border: none
+        border-bottom: 2px solid $green
+        width: 100%
+        font-size: 14px
+        outline: none
+        text-transform: uppercase
+        color: $green
+        text-align: center
+        letter-spacing: 1px
+        padding-top: 20px
+        padding-bottom: 10px
+        &:focus::-webkit-input-placeholder
+            opacity: 0
+        &::-webkit-input-placeholder
+            color: $green        
+        &.error
+            border-bottom: 2px solid $red
+    button
+        border: 2px solid $green
+        padding: 12px 30px
+        outline: none
+        cursor: pointer
+        background: none
+        color: $green
+        font-weight: 700
+        letter-spacing: 2px
+        text-transform: uppercase
+        margin-top: 50px
+        display: block
+        margin-left: auto
+        margin-right: auto
+        position: relative
+        &:before,&:after
+            content: ""
+            display: block
+            position: absolute
+            top: -2px
+            left: -2px
+            height: 100%
+            width: 100%
+            opacity: 0 
+        &:after
+            border: 2px solid #f0f
+            z-index: -2
+        &:before 
+            border: 3px solid #0ff
+            z-index: -1
+        &:hover            
+            &:before
+                animation: glitch-btn 0.3s cubic-bezier(.25, .46, .45, .94) both infinite
+                opacity: 1
+            &:after
+                animation: glitch-btn 0.3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+                opacity: 1
+@keyframes glitch-btn
+    0%
+        transform: translate(0)
+    20%
+        transform: translate(-2px, 2px)
+    40%
+        transform: translate(-2px, -2px)
+    60%
+        transform: translate(2px, 2px)
+    80%
+        transform: translate(2px, -2px)
+    to
+        transform: translate(0)

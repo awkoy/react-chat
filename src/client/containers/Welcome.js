@@ -1,17 +1,21 @@
-import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import Title from './../components/title';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Title from "./../components/title";
+import Form from "./../components/form";
 
 class Welcome extends Component {
-  render() {
 
-    const {
-      title
-    } = this.props;
+  sendSubmitData = (data) => { 
+    console.log(data);
+  }
+
+  render() {
+    const { title } = this.props;
 
     return (
-      <div>
+      <div className="app__container">
         <Title val={title} />
+        <Form submit={this.sendSubmitData}/>
       </div>
     );
   }
@@ -20,7 +24,7 @@ class Welcome extends Component {
 const mapStateToProps = state => {
   return {
     title: state.message
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps)(Welcome);
