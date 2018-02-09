@@ -22,6 +22,9 @@ io.on("connection", socket => {
 //   socket.on("disconnect", () => {
 //     io.emit("counter", io.engine.clientsCount);
 //   });
+    socket.on("loggined", username => {
+        console.log(username);
+    });
 });
 
 http.listen(process.env.PORT || 8000, () => {

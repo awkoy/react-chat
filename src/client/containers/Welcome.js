@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import Title from "./../components/title";
 import Form from "./../components/form";
 
+import { loginUser } from './../api';
+
 class Welcome extends Component {
 
-  sendSubmitData = (data) => { 
-    console.log(data);
-  }
+  sendSubmitData = (data) => loginUser(data);
 
   render() {
     const { title } = this.props;
