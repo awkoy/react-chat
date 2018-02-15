@@ -30,13 +30,51 @@ h1 {
   padding-left: 40px;
   padding-right: 30px;
   position: absolute;
-  background: #000;
   min-height: 400px;
   left: 0;
   right: 0;
   z-index: 2;
   top: 50%;
   transform: translateY(-50%); }
+
+.app__list {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #0F0;
+  border-radius: 3px;
+  min-height: 350px;
+  margin-bottom: 70px; }
+
+.app__message {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  color: #0F0;
+  padding-left: 25px;
+  padding-right: 30px;
+  position: relative; }
+  .app__message:after {
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 10px;
+    background: #0F0;
+    position: absolute;
+    top: 17px;
+    left: 12px; }
+  .app__message__user {
+    display: inline-block;
+    margin-right: 10px;
+    position: relative; }
+    .app__message__user:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 8px;
+      height: 1px;
+      content: '';
+      background: #0F0; }
 
 .app__form {
   max-width: 400px;

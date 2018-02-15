@@ -1,3 +1,3 @@
 import React from "react";
 
-export default props => <button onClick={props.action}>{props.value}</button>;
+export default ({action,value}) => <button onClick={action}>{value}</button>;
